@@ -1,7 +1,7 @@
 --Literal A de los ejercicios. Creacion de la vista
 CREATE VIEW info_tienda AS
 SELECT 
-	CONCAT(st.first_name, " ", st.last_name) AS STAFF_MANAGER, 
+    CONCAT(st.first_name, " ", st.last_name) AS STAFF_MANAGER, 
     a.address AS ADDRESS, 
     c.city AS CITY, 
     co.country AS COUNTRY
@@ -18,7 +18,7 @@ SELECT * FROM info_tienda;
 --Literal B de los ejercicios. Creacion de la vista
 CREATE VIEW info_peliculas AS
 SELECT 
-	f.title, 
+    f.title, 
     c.name, 
     GROUP_CONCAT(CONCAT(a.first_name, " ", a.last_name) SEPARATOR ", ") AS Actores
 FROM actor a 
@@ -34,7 +34,7 @@ SELECT * FROM info_peliculas;
 --Literal C de los ejercicios. Crecación de la vista
 CREATE VIEW peliculas_address AS
 SELECT 
-	f.title, 
+    f.title, 
     a.address, 
     c.city, 
     co.country 
